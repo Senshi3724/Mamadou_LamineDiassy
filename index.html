@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio - Développeur Mobile</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <style>
+    body { 
+      font-family: Arial, sans-serif; 
+      margin:0; padding:0; 
+      background: url('assets/profile.jpg') no-repeat center center fixed;
+      background-size: cover;
+      color: #fff;
+    }
+    body::before {
+      content:"";
+      position:fixed; top:0; left:0;
+      width:100%; height:100%;
+      background: rgba(0,0,0,0.5);
+      z-index:-1;
+    }
+    header {
+      display: flex; flex-wrap: wrap; align-items: center; justify-content: flex-start;
+      padding: 2rem;
+      backdrop-filter: blur(10px);
+      background: rgba(0,0,0,0.5);
+      border-radius: 15px;
+      margin: 1rem auto;
+      max-width: 900px;
+      color: #fff;
+      text-align: left;
+    }
+    header img.cover {
+      width: 150px; height: 150px; border-radius: 50%; border: 4px solid white; object-fit: cover; margin-right: 20px;
+    }
+    header .info { flex: 1; min-width: 250px; }
+    header h1 { margin:0; font-size:2rem; }
+    header h2 { margin:5px 0; font-size:1.2rem; font-weight:normal; color:#ddd; }
+    header p.contact { display:flex; flex-wrap:wrap; gap:20px; margin:10px 0; font-size:1rem; }
+    header p.contact a { display:flex; align-items:center; gap:8px; text-decoration:none; }
+    header p.contact a[href^="mailto"] { color: yellow; }
+    header p.contact a[href^="tel"] { color: white; }
+    nav { margin-top:15px; }
+    nav a { margin:0 10px; color:white; font-weight:bold; text-decoration:none; }
+
+    section { padding:2rem; }
+
+    /* Parcours */
+    section#parcours ul { list-style-type: disc; margin-left:20px; }
+
+    /* Compétences */
+    .skills-container { display:flex; flex-wrap:wrap; gap:2rem; margin-top:1rem; }
+    .skill-category { flex:1; min-width:250px; background: rgba(255,255,255,0.05); padding:1rem; border-radius:10px; }
+    .skill-category h3 { margin-bottom:1rem; text-align:center; color:#fff; }
+    .skills { display:flex; flex-wrap:wrap; gap:15px; justify-content:center; }
+    .skill-item { display:flex; flex-direction:column; align-items:center; gap:5px; color:#fff; }
+    .skill-item img { width:50px; height:50px; object-fit:contain; border-radius:5px; }
+    .skill-item span { font-size:0.9rem; text-align:center; }
+
+    /* Projets */
+    .projects-container { display: flex; flex-direction: column; gap:2rem; }
+    .project-item {
+      display: flex; flex-wrap: wrap;
+      align-items: center;
+      gap: 20px;
+      background: rgba(255,255,255,0.05);
+      padding: 1rem;
+      border-radius: 10px;
+      position: relative;
+    }
+    .video-container video {
+  width: 150px;   /* largeur réduite */
+  height: auto;   /* conserve le ratio */
+  border-radius: 10px;
+}
+
+    .project-item .project-info { 
+      flex:1; 
+      text-align: center; /* centré le texte */
+    }
+    .project-item .project-info h3 { 
+      margin:0 0 0.5rem 0; 
+      font-size:1.5rem; /* plus grand */
+    }
+    .project-item .project-info p { 
+      margin:0 0 0.5rem 0; 
+      font-size:1.1rem; /* plus grand */
+    }
+    .code-btn {
+      display:inline-block;
+      padding:10px 25px; /* bouton plus large */
+      background:#6ec1ff;
+      color:#000;
+      text-decoration:none;
+      font-weight:bold;
+      border-radius:5px;
+      opacity:0;
+      font-size:1.1rem; /* texte du bouton plus grand */
+      transition: opacity 0.5s;
+      margin-top:10px;
+    }
+    .side-logo { width: 50px; height: 50px; }
+
+    /* Socials */
+    .socials {
+      display:flex; flex-wrap:wrap; justify-content:center; align-items:center; margin-top:1rem; gap: 20px;
+    }
+    .social-item { text-align: center; cursor: pointer; transition: transform 0.3s; text-decoration: none; }
+    .social-item:hover { transform: scale(1.1); }
+    .social-item img { width: 120px; height: 120px; object-fit: cover; border-radius: 10px; display:block; margin-bottom: 10px; }
+    .social-item span { display:block; font-weight: bold; color: #fff; text-decoration: none; }
+
+    footer { background:#ff4d4f; color:white; text-align:center; padding:1rem; margin-top:2rem; }
+  </style>
+</head>
+<body>
+
+<header>
+  <img src="assets/profile2.jpg" alt="Photo de profil" class="cover">
+  <div class="info">
+    <h1>Mamadou Lamine Diassy</h1>
+    <h2>21 ans</h2>
+    <p class="contact">
+      <a href="mailto:diassymomo7@gmail.com"><i class="fas fa-envelope"></i> diassymomo7@gmail.com</a>
+      <a href="tel:+221781724986"><i class="fas fa-phone"></i> +221 78.172.49.86</a>
+    </p>
+    <p>Etudiant au CFPT Sénégal-Japon en informatique industrielle et réseau</p>
+    <p>Stagiaire chez itea.africa comme Développeur Mobile Flutter & Figma</p>
+    <nav>
+      <a href="#parcours">Parcours</a>
+      <a href="#competences">Compétences</a>
+      <a href="#projets">Projets</a>
+      <a href="#motivation">Motivation</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<section id="parcours">
+  <h2>Parcours</h2>
+  <ul>
+    <li>BEFM en 2019/2020</li>
+    <li>Bac S2 en 2022/2023</li>
+    <li>1ère année BTS Informatique (CFPT Sénégal-Japon)</li>
+    <li>Stage chez itea.africa - projet e-commerce</li>
+  </ul>
+</section>
+
+<section id="competences">
+  <h2>Compétences</h2>
+
+  <div class="skills-container">
+
+    <div class="skill-category">
+      <h3>Front-End</h3>
+      <div class="skills">
+        <div class="skill-item">
+          <img src="assets/html.svg" alt="HTML"><span>HTML (Junior)</span>
+        </div>
+        <div class="skill-item">
+          <img src="assets/css.svg" alt="CSS"><span>CSS (Junior)</span>
+        </div>
+        <div class="skill-item">
+          <img src="assets/javascript.svg" alt="JavaScript"><span>JavaScript (Junior)</span>
+        </div>
+        <div class="skill-item">
+          <img src="assets/flutter.png" alt="Flutter"><span>Flutter (Senior)</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="skill-category">
+      <h3>Back-End</h3>
+      <div class="skills">
+        <div class="skill-item">
+          <img src="assets/php.svg" alt="PHP"><span>PHP (Débutant)</span>
+        </div>
+        <div class="skill-item">
+          <img src="assets/java.svg" alt="Java"><span>Java (Junior)</span>
+        </div>
+        <div class="skill-item">
+          <img src="assets/c.svg" alt="C"><span>C (Junior)</span>
+        </div>
+        <div class="skill-item">
+          <img src="assets/python.svg" alt="Python"><span>Python (Junior)</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="skill-category">
+      <h3>Design</h3>
+      <div class="skills">
+        <div class="skill-item">
+          <img src="assets/figma.svg" alt="Figma"><span>Figma</span>
+        </div>
+        <div class="skill-item">
+          <img src="assets/logo.png" alt="Création Logo"><span>Création Logo</span>
+        </div>
+        <div class="skill-item">
+          <img src="assets/affiche.svg" alt="Affiches"><span>Affiches</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="skill-category">
+      <h3>Langues Parlées</h3>
+      <div class="skills">
+        <div class="skill-item">
+          <img src="assets/Flag_of_France.svg" alt="Français"><span>Français (Très bon)</span>
+        </div>
+        <div class="skill-item">
+          <img src="assets/Flag_of_Senegal.svg" alt="Wolof"><span>Wolof (Maternel)</span>
+        </div>
+        <div class="skill-item">
+          <img src="assets/Flag_of_the_United_Kingdom.svg" alt="Anglais"><span>Anglais (Débutant)</span>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<section id="projets">
+  <h2>Projets Réalisés</h2>
+  <div class="projects-container">
+ <div class="project-item">
+      <div class="video-container">
+        <video src="assets/video2.mp4" controls></video>
+      </div>
+      <div class="project-info">
+        <h3>Application E-Commerce Othentik Projet Entreprise (En cours)</h3>
+        <p>Creation de l'Application E-commerce Othentik avec Flutter.(Entreprise itea.africa)</p>
+        <a href="https://github.com/Senshi3724/Hotel-App" target="_blank" class="code-btn">Voir le code Flutter</a>
+      </div>
+      <img src="assets/flutter.png" alt="Logo Flutter" class="side-logo">
+    </div>
+
+    <div class="project-item">
+      <div class="video-container">
+        <video src="assets/video0.mp4" controls></video>
+      </div>
+      <div class="project-info">
+        <h3>Application Hotel</h3>
+        <p>Reproduction de l’interface Hotel avec Flutter.</p>
+        <a href="https://github.com/Senshi3724/Hotel-App" target="_blank" class="code-btn">Voir le code Flutter</a>
+      </div>
+      <img src="assets/flutter.png" alt="Logo Flutter" class="side-logo">
+    </div>
+
+    <div class="project-item">
+      <div class="video-container">
+        <video src="assets/video7.mp4" controls></video>
+      </div>
+      <div class="project-info">
+        <h3>Application TikTok</h3>
+        <p>Reproduction de TikTok en Flutter.</p>
+        <a href="https://github.com/Senshi3724/tiktok" target="_blank" class="code-btn">Voir le code Flutter</a>
+      </div>
+      <img src="assets/flutter.png" alt="Logo Flutter" class="side-logo">
+    </div>
+
+    <div class="project-item">
+      <div class="video-container">
+        <video src="assets/video3.mp4" controls></video>
+      </div>
+      <div class="project-info">
+        <h3>Application Watchapp</h3>
+        <p>Reproduction de Watchapp en Flutter.</p>
+        <a href="https://github.com/Senshi3724/wathsapp" target="_blank" class="code-btn">Voir le code Flutter</a>
+      </div>
+      <img src="assets/flutter.png" alt="Logo Flutter" class="side-logo">
+    </div>
+
+    <div class="project-item">
+      <div class="video-container">
+        <video src="assets/video1.mp4" controls></video>
+      </div>
+      <div class="project-info">
+        <h3>Application Instagram</h3>
+        <p>Reproduction de Instagram en Flutter.</p>
+        <a href="https://github.com/Senshi3724/instagram" target="_blank" class="code-btn">Voir le code Flutter</a>
+      </div>
+      <img src="assets/flutter.png" alt="Logo Flutter" class="side-logo">
+    </div>
+
+  </div>
+</section>
+
+<section id="motivation">
+  <h2>Lettre de Motivation</h2>
+  <div style="text-align:center; max-width: 600px; margin: 0 auto; line-height:1.6; font-size:1rem; color:#fff; background: rgba(0,0,0,0.4); padding:1rem 1.5rem; border-radius:10px;">
+    <p>Je suis passionné par le développement mobile et toujours en apprentissage pour améliorer mes compétences. J’ai récemment commencé un stage chez <strong>itea.africa</strong>, où j’ai participé au développement d’une application e-commerce nommée <strong>Othentik</strong>, ce qui m’a permis de mettre en pratique mes connaissances et de découvrir le fonctionnement d’un projet professionnel.</p>
+
+    <p>En parallèle, je réalise des projets personnels et des exercices en formation, tels que des reproductions d’interfaces d’applications populaires comme <strong>Instagram, TikTok</strong> et des applications hôtelières, afin de renforcer mes compétences en <strong>Flutter</strong>, en <strong>intégration d’API</strong> et en <strong>design d’interface</strong> avec <strong>Figma</strong>. J’ai également acquis quelques notions en <strong>HTML, CSS, JavaScript</strong> et en <strong>bureautique</strong>, ce qui me permet de concevoir des présentations claires et professionnelles.</p>
+
+    <p>Je sais <strong>utiliser les outils d’intelligence artificielle</strong> pour accélérer le travail et optimiser mes projets. Bien que certains disent que l’IA pourrait remplacer les développeurs, je considère qu’il faut <strong>savoir surfer sur cette nouvelle vague et avancer avec</strong>, en utilisant ces outils pour être plus efficace et innovant.</p>
+
+    <p>Curieux et motivé, je souhaite <strong>mettre en valeur mes compétences en développement mobile</strong>, tout en restant ouvert à travailler sur <strong>d’autres domaines de l’informatique</strong> et apprendre davantage. De plus, je possède une expérience dans la <strong>création de contenu visuel</strong>, la <strong>conception de designs</strong> et la <strong>présentation de projets</strong>, que ce soit en vidéo ou devant un public, ce qui me donne une bonne capacité à expliquer et mettre en valeur mes travaux.</p>
+
+    <p>Rigoureux et motivé, mon objectif est de continuer à apprendre tout en contribuant à des projets réels qui ont un impact concret. Je souhaite créer des applications modernes, intuitives et performantes, capables d’apporter une réelle valeur aux utilisateurs.</p>
+  </div>
+</section>
+
+
+<section id="contact">
+  <h2>Contact</h2>
+  <p>Scannez les QR codes pour me retrouver :</p>
+  <div class="socials">
+    <a href="https://wa.me/qr/BVRJ3W6PONT6A1" class="social-item">
+      <img src="assets/WhatsApp.jpg" alt="WhatsApp QR"><span>WhatsApp</span>
+    </a>
+    <a href="https://www.tiktok.com/@raion_senshi3?_t=ZM-901PduvRKqi&_r=1" class="social-item">
+      <img src="assets/tiktok.jpg" alt="TikTok QR"><span>TikTok</span>
+    </a>
+    <a href="https://www.instagram.com/momo__senshi" class="social-item">
+      <img src="assets/instagram.jpg" alt="Instagram QR"><span>Instagram</span>
+    </a>
+    <a href="https://www.linkedin.com/in/mamadou-lamine-diassy-27b051331" class="social-item">
+      <img src="assets/linkedin.jpg" alt="LinkedIn QR"><span>LinkedIn</span>
+    </a>
+  </div>
+</section>
+
+<footer>
+  <p>&copy; 2025 Mamadou Lamine Diassy - Portfolio Mobile</p>
+</footer>
+
+<script>
+  const sections = document.querySelectorAll('section');
+  const revealOnScroll = () => {
+    const triggerBottom = window.innerHeight * 0.8;
+    sections.forEach(sec => {
+      const rect = sec.getBoundingClientRect();
+      if (rect.top < triggerBottom) {
+        sec.style.opacity = 1;
+        sec.style.transform = 'translateY(0)';
+      }
+    });
+  };
+  window.addEventListener('scroll', revealOnScroll);
+  window.addEventListener('load', revealOnScroll);
+  sections.forEach(sec => {
+    sec.style.opacity = 0;
+    sec.style.transform = 'translateY(50px)';
+    sec.style.transition = 'all 0.8s ease-out';
+  });
+
+  const projectItems = document.querySelectorAll('.project-item');
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      const button = entry.target.querySelector('.code-btn');
+      if(entry.isIntersecting){
+        button.style.opacity = 1;
+      } else {
+        button.style.opacity = 0;
+      }
+    });
+  }, { threshold: 0.5 });
+  projectItems.forEach(item => observer.observe(item));
+</script>
+</body>
+</html>
