@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CV - Mamadou Lamine Diassy</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #f0f2f5;
+      color: #333;
+      line-height: 1.6;
+    }
+
+    .container {
+      max-width: 900px;
+      margin: 10px auto;
+      background: white;
+      box-shadow: 0 0 20px rgba(0,0,0,0.1);
+      display: flex;
+      min-height: 90vh;
+    }
+
+    .sidebar {
+      width: 280px;
+      background: linear-gradient(135deg, #0066cc, #0052a3);
+      color: white;
+      padding: 1.5rem;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .profile-img {
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      border: 4px solid white;
+      object-fit: contain;
+      margin: 0 auto 1rem;
+      background: white;
+    }
+
+    .sidebar h1 {
+      font-size: 1.3rem;
+      text-align: center;
+      margin-bottom: 0.5rem;
+    }
+
+    .sidebar .title {
+      text-align: center;
+      font-size: 0.95rem;
+      color: #e0e0e0;
+      margin-bottom: 1.5rem;
+    }
+
+    .contact-info {
+      margin-bottom: 1.5rem;
+      padding-bottom: 1.5rem;
+      border-bottom: 1px solid rgba(255,255,255,0.2);
+    }
+
+    .contact-item {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      margin-bottom: 0.75rem;
+      font-size: 0.9rem;
+      word-break: break-word;
+    }
+
+    .sidebar h3 {
+      font-size: 0.85rem;
+      text-transform: uppercase;
+      margin-top: 1.5rem;
+      margin-bottom: 0.75rem;
+      color: #e0e0e0;
+    }
+
+    .sidebar ul {
+      list-style: none;
+    }
+
+    .sidebar ul li {
+      margin-bottom: 0.5rem;
+      font-size: 0.9rem;
+    }
+
+    .main-content {
+      flex: 1;
+      padding: 1.5rem;
+      overflow-y: auto;
+    }
+
+    section {
+      margin-bottom: 1.5rem;
+    }
+
+    h2 {
+      font-size: 1.3rem;
+      color: #0066cc;
+      border-bottom: 3px solid #0066cc;
+      padding-bottom: 0.3rem;
+      margin-bottom: 0.75rem;
+    }
+
+    .section-item {
+      margin-bottom: 0.75rem;
+    }
+
+    .section-item strong {
+      color: #0066cc;
+    }
+
+    .section-item p {
+      margin: 0.25rem 0;
+      color: #666;
+    }
+
+    .skills-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      margin-top: 0.5rem;
+    }
+
+    .skill-badge {
+      background: #f0f2f5;
+      color: #0066cc;
+      padding: 0.3rem 0.8rem;
+      border-radius: 15px;
+      font-size: 0.85rem;
+      border: 1px solid #0066cc;
+    }
+
+    .print-btn {
+      background: #0066cc;
+      color: white;
+      border: none;
+      padding: 0.75rem 1.5rem;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 1rem;
+      margin-bottom: 1rem;
+      transition: background 0.3s;
+    }
+
+    .print-btn:hover {
+      background: #0052a3;
+    }
+
+    @media print {
+      body {
+        background: white;
+      }
+      
+      .container {
+        box-shadow: none;
+        margin: 0;
+      }
+
+      .print-btn {
+        display: none;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .container {
+        flex-direction: column;
+      }
+
+      .sidebar {
+        width: 100%;
+        padding: 1.5rem;
+      }
+
+      .main-content {
+        padding: 1.5rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <!-- Sidebar -->
+    <div class="sidebar">
+      <img src="../assets/profile2.jpg" alt="Photo" class="profile-img">
+      <h1>Mamadou Lamine Diassy</h1>
+      <div class="title">Étudiant Développeur Mobile & Web</div>
+
+      <div class="contact-info">
+        <div class="contact-item">
+          <i class="fas fa-envelope" style="flex-shrink: 0;"></i>
+          diassymomo7@gmail.com
+        </div>
+        <div class="contact-item">
+          <i class="fas fa-phone" style="flex-shrink: 0;"></i>
+          +221 78.172.49.86
+        </div>
+        <div class="contact-item">
+          <i class="fab fa-github" style="flex-shrink: 0;"></i>
+          github.com/Senshi3724
+        </div>
+        <div class="contact-item">
+          <i class="fas fa-globe" style="flex-shrink: 0;"></i>
+          <a href="https://senshi3724.github.io/Mamadou_LamineDiassy/" target="_blank" style="color: white; text-decoration: none;">Portfolio</a>
+        </div>
+      </div>
+
+      <h3>Formation</h3>
+      <ul>
+        <li><strong>BTS DAM</strong><br>2ème année (En cours)</li>
+        <li><strong>BTS Informatique</strong><br>CFPT Sénégal-Japon</li>
+        <li><strong>Stage - itea.africa</strong><br>Application e-commerce | Assistant IA FDCUIC | Assistant IA Demm Dikk</li>
+      </ul>
+
+      <h3>Langues</h3>
+      <ul>
+        <li>Français (C1)</li>
+        <li>Wolof (C2 - Natif)</li>
+        <li>Anglais (A2)</li>
+      </ul>
+
+      <h3>Infos Personnelles</h3>
+      <ul>
+        <li>📅 <strong>03/07/2004</strong></li>
+        <li>📍 <strong>Ziguinchor</strong></li>
+        <li>💑 <strong>Célibataire</strong></li>
+        <li>⚽ <strong>Loisirs :</strong> Football, Gaming</li>
+        <li>✨ <strong>Fan de Mangas</strong></li>
+      </ul>
+    </div>
+
+    <!-- Main Content -->
+    <div class="main-content">
+      <button class="print-btn" onclick="window.print()">
+        <i class="fas fa-print"></i> Imprimer / Sauvegarder en PDF
+      </button>
+
+      <section>
+        <h2>Compétences</h2>
+        
+        <div class="section-item">
+          <strong>Langages</strong>
+          <div class="skills-list" style="display:flex; flex-wrap:wrap; gap:1rem; margin-top:0.5rem;">
+            <div style="display:flex; flex-direction:column; align-items:center; gap:0.3rem;">
+              <img src="../assets/html.svg" alt="HTML" style="width:30px; height:30px;">
+              <span style="font-size:0.8rem;">HTML</span>
+            </div>
+            <div style="display:flex; flex-direction:column; align-items:center; gap:0.3rem;">
+              <img src="../assets/css.svg" alt="CSS" style="width:30px; height:30px;">
+              <span style="font-size:0.8rem;">CSS</span>
+            </div>
+            <div style="display:flex; flex-direction:column; align-items:center; gap:0.3rem;">
+              <img src="../assets/python.svg" alt="Python" style="width:30px; height:30px;">
+              <span style="font-size:0.8rem;">Python</span>
+            </div>
+            <div style="display:flex; flex-direction:column; align-items:center; gap:0.3rem;">
+              <img src="../assets/c.svg" alt="C" style="width:30px; height:30px;">
+              <span style="font-size:0.8rem;">C</span>
+            </div>
+            <div style="display:flex; flex-direction:column; align-items:center; gap:0.3rem;">
+              <img src="../assets/php.svg" alt="PHP" style="width:30px; height:30px;">
+              <span style="font-size:0.8rem;">PHP</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="section-item">
+          <strong>Frameworks</strong>
+          <div class="skills-list" style="display:flex; flex-wrap:wrap; gap:1rem; margin-top:0.5rem;">
+            <div style="display:flex; flex-direction:column; align-items:center; gap:0.3rem;">
+              <img src="../assets/flutter.png" alt="Flutter" style="width:30px; height:30px;">
+              <span style="font-size:0.8rem;">Flutter</span>
+            </div>
+            <div style="display:flex; flex-direction:column; align-items:center; gap:0.3rem;">
+              <i class="fab fa-react" style="color:#61dafb; font-size:1.8rem;"></i>
+              <span style="font-size:0.8rem;">React</span>
+            </div>
+            <div style="display:flex; flex-direction:column; align-items:center; gap:0.3rem;">
+              <i class="fab fa-laravel" style="color:#ff2d20; font-size:1.8rem;"></i>
+              <span style="font-size:0.8rem;">Laravel</span>
+            </div>
+            <div style="display:flex; flex-direction:column; align-items:center; gap:0.3rem;">
+              <i class="fab fa-symfony" style="color:#000; font-size:1.8rem;"></i>
+              <span style="font-size:0.8rem;">Symfony</span>
+            </div>
+            <div style="display:flex; flex-direction:column; align-items:center; gap:0.3rem;">
+              <i class="fas fa-cube" style="color:#009688; font-size:1.8rem;"></i>
+              <span style="font-size:0.8rem;">FastAPI</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="section-item">
+          <strong>Bases de Données & Outils</strong>
+          <div class="skills-list" style="display:flex; flex-wrap:wrap; gap:1rem; margin-top:0.5rem;">
+            <div style="display:flex; flex-direction:column; align-items:center; gap:0.3rem;">
+              <i class="fas fa-database" style="color:#336791; font-size:1.8rem;"></i>
+              <span style="font-size:0.8rem;">PostgreSQL</span>
+            </div>
+            <div style="display:flex; flex-direction:column; align-items:center; gap:0.3rem;">
+              <i class="fas fa-database" style="color:#0052cc; font-size:1.8rem;"></i>
+              <span style="font-size:0.8rem;">MySQL</span>
+            </div>
+            <div style="display:flex; flex-direction:column; align-items:center; gap:0.3rem;">
+              <i class="fas fa-diagram-project" style="color:#333; font-size:1.8rem;"></i>
+              <span style="font-size:0.8rem;">UML</span>
+            </div>
+            <div style="display:flex; flex-direction:column; align-items:center; gap:0.3rem;">
+              <i class="fas fa-table" style="color:#333; font-size:1.8rem;"></i>
+              <span style="font-size:0.8rem;">MERISE</span>
+            </div>
+            <div style="display:flex; flex-direction:column; align-items:center; gap:0.3rem;">
+              <img src="../assets/figma.svg" alt="Figma" style="width:30px; height:30px;">
+              <span style="font-size:0.8rem;">Figma</span>
+            </div>
+            <div style="display:flex; flex-direction:column; align-items:center; gap:0.3rem;">
+              <i class="fab fa-git" style="color:#f34f29; font-size:1.8rem;"></i>
+              <span style="font-size:0.8rem;">Git</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <h2>Projets Réalisés</h2>
+        
+        <div class="section-item">
+          <strong>Momo.ai - Chatbot IA</strong>
+          <p>Application de chatbot IA intelligent conçue pour les conversations naturelles et fluides. Utilise des modèles de traitement du langage naturel pour fournir des réponses pertinentes et contextuelles.</p>
+          <p><a href="https://youtu.be/vSq8pw6rhMw?si=c5bsyjAdIo5N4BF4" target="_blank" style="color: #0066cc;">https://youtu.be/vSq8pw6rhMw?si=c5bsyjAdIo5N4BF4</a></p>
+        </div>
+
+        <div class="section-item">
+          <strong>Application RTS - Web & Mobile</strong>
+          <p>Reproduction complète de l'application RTS en Flutter (mobile) et React (web). Consommation de l'API RTS pour récupérer les données en temps réel. Synchronisation seamless entre les deux plateformes.</p>
+        </div>
+
+        <div class="section-item">
+          <strong>Application Hôtel - Flutter</strong>
+          <p>Reproduction d'une interface hôtelière avec réservation et gestion des disponibilités.</p>
+        </div>
+
+        <div class="section-item">
+          <strong>Application TikTok Clone - Flutter</strong>
+          <p>Reproduction de TikTok avec scroll vidéo, likes, commentaires et partage.</p>
+        </div>
+
+        <div class="section-item">
+          <strong>Application WhatsApp Clone - Flutter</strong>
+          <p>Reproduction de WhatsApp avec conversations et contacts.</p>
+        </div>
+
+        <div class="section-item">
+          <strong>Application Instagram Clone - Flutter</strong>
+          <p>Reproduction d'Instagram avec feed, stories et profil utilisateur.</p>
+        </div>
+      </section>
+
+      <section>
+        <h2>Profil Professionnel</h2>
+        <p>
+          Développeur passionné en 2ème année de BTS Développement d'Applications Mobiles avec expertise en Flutter et développement web. 
+          Spécialisé dans la création d'applications mobiles modernes, intuitives et performantes. 
+          Toujours en apprentissage pour explorer de nouvelles technologies et créer des solutions innovantes.
+        </p>
+      </section>
+    </div>
+  </div>
+
+</body>
+</html>
